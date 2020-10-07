@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <title>CountWatch</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="card card-body">
+                    <div class="btn-group">
+                        <button class="btn btn-info col-md-6" id="timer">Timer</button>
+                        <button class="btn btn-info col-md-6" id="stopwatch">Stopwatch</button> 
+                    </div>
+                    <div class="form-group">
+                        <form id="task-form">
+                            <div class="input-field col-md-12">
+                                <span class="display-4" id="span1">00<span id="a">hr</span>:00<span id="a">min</span>:00<span id="a">sec</span>:00</span>
+                                <span class="display-4" style="display: none;" id="span2">00<span id="a">hr</span>:00<span id="a">min</span>:00<span id="a">sec</span>:00</span>
+                                <input type="text" name="task" id="input" class="input" placeholder="00:00:00:00">
+                                <div class="invalid-feedback">
+                                    Enter Time In Valid Format
+                                </div>
+                            </div>
+                            
+                            <input type="submit" value="Start" id="startt" class="btn">
+                            <input type="submit" value="Reset" id="resett" class="btn">
+                            <input type="submit" value="Start" id="starts" onclick="disableBtn('starts');" class="btn" style="display: none;">
+                            <input type="submit" value="Reset" id="resets" class="btn" onclick="enableBtn('starts');" style="display: none;">
+                            <input type="submit" value="Stop" id="stops" class="btn" style="display: none;">
+                            <input type="submit" value="Run" id="runs" class="btn" style="display: none;">
+                        </form>
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+               
+                <!-- <div id="main" class="card">
+                    <div class="card-content">
+                         <span class="card-title">Task List</span>
+                         <div class="row">
+                             <form id="task-form">
+                                 <div class="input-field col s12">
+                                     <input type="text" name="task" id="task">
+                                     <label for="task">New Task</label>
+                                 </div>
+                                 <input type="submit" value="Add task" class="btn">
+                             </form>
+                         </div>
+                    </div>
+                    <div class="card-action">
+                        <h5 id="task-title">Tasks</h5>
+                        <div class="input-field col s12">
+                            <input type="text" name="filter" id="filter">
+                            <label for="filter">Filter Task</label>
+                        </div>
+                        <ul class="collection"></ul>
+                        <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+                    </div>
+                </div>  -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
